@@ -50,7 +50,7 @@ for i in range(N):
 	model.add(BatchNormalization())
 	model.add(Activation('relu'))
 
-# Deconvolutional layers
+# Upsampling layers
 for i in range(N):
 	model.add(UpSampling2D(size=(2, 2)))
 	model.add(Convolution2D(num_maps2[-(i+1)], 3, 3, border_mode='same'))
